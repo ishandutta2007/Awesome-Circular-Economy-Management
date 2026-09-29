@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 260" width="100%" height="260">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a78bfa" />
+    </linearGradient>
+
+    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.2" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="850" height="260" rx="16" fill="url(#bgGrad)" stroke="#334155" stroke-width="1.5" />
+
+  <!-- Animated Background Elements (Lower Z-Index) -->
+  <g opacity="0.35">
+    <!-- Spinning Loop 1 -->
+    <circle cx="720" cy="130" r="85" fill="none" stroke="url(#circleGrad)" stroke-width="6" stroke-dasharray="20 10">
+      <animateTransform attributeName="transform" type="rotate" from="0 720 130" to="360 720 130" dur="20s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Counter-spinning Loop 2 -->
+    <circle cx="720" cy="130" r="55" fill="none" stroke="#a78bfa" stroke-width="3" stroke-dasharray="12 8" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" from="360 720 130" to="0 720 130" dur="12s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Floating Flow Particles -->
+    <circle cx="100" cy="50" r="3" fill="#34d399">
+      <animate attributeName="cy" values="50;70;50" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="220" r="4" fill="#38bdf8">
+      <animate attributeName="cx" values="450;480;450" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="6s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Decorative Flow Wave Grid -->
+  <path d="M 0 190 Q 200 240 400 190 T 850 210" fill="none" stroke="#1e293b" stroke-width="2" />
+  <path d="M 0 200 Q 220 160 450 205 T 850 190" fill="none" stroke="url(#textGrad)" stroke-width="1.5" opacity="0.3" />
+
+  <!-- Foreground Content (High Z-Index - Guaranteed Visibility) -->
+  <!-- Icon & Badge Header -->
+  <g transform="translate(45, 42)">
+    <rect width="185" height="28" rx="14" fill="#0f766e" fill-opacity="0.4" stroke="#14b8a6" stroke-width="1" />
+    <text x="14" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#2dd4bf">
+      ♻️ CIRCULAR ECONOMY 2026
+    </text>
+  </g>
+
+  <!-- Title -->
+  <text x="45" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="800" fill="url(#textGrad)" filter="url(#glow)">
+    Awesome Circular Economy Management
+  </text>
+
+  <!-- Subtitle -->
+  <text x="45" y="148" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">
+    Curated SaaS Platforms, Open Source Digital Product Passports (DPP) &amp; Reverse Logistics
+  </text>
+
+  <!-- Feature Pills Footer -->
+  <g transform="translate(45, 182)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="135" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="12" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">
+      📦 Reverse Logistics
+    </text>
+
+    <!-- Pill 2 -->
+    <rect x="145" y="0" width="165" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="157" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">
+      🆔 Digital Product Passport
+    </text>
+
+    <!-- Pill 3 -->
+    <rect x="320" y="0" width="150" height="30" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <text x="332" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">
+      🌱 Sustainable Commerce
+    </text>
+  </g>
+</svg>
